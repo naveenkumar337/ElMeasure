@@ -4,6 +4,8 @@ function getData(str){
 var arr=str.split('&');
 var mainarry=[];
 var temparray=[]
+console.log('hi');
+//devide the string as group
 for(var i=0;i<arr.length;i++){
     if(arr[i].startsWith('bid')){
         if(temparray.length>0){
@@ -17,17 +19,21 @@ for(var i=0;i<arr.length;i++){
         temparray.push(arr[i]);
     }
     }
+    //create a class
 class tabledata{
     header="";
     tds=[];
 }
+//map the td values and header
 var finalarray=[];
 mainarry.forEach(index=>
     {
      var obj1=new tabledata();
      obj1.header=arr[arr.indexOf(index[0])-1].split('=')[1];
+     //iterate the row(tr)
     index.forEach(x=>{
     var temparr=[];
+    //iterate the td 
     x.split(',').forEach(y=>temparr.push(y));
     obj1.tds.push(temparr);
 });
