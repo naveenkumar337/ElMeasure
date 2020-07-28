@@ -1,0 +1,39 @@
+#button-section{
+    margin: 0 auto;
+    text-align: center;
+    padding: 12px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.btn-get{
+    font-size: 30px;
+    width: 40%;
+    border: none;
+    background-color: blue;
+    color: white;
+    border-radius: 5%;
+    cursor: pointer;
+}
+.table-section{
+    width: 100%;
+    justify-items: center;
+    align-content: center;
+}
+.table-section table{
+    background-color: #ddd;
+    width: 100%;
+    margin:0 auto;
+}
+tr{
+    border-bottom: 20px;
+    margin:0 auto;
+    
+}
+t td{
+    border: 3px solid red;
+    margin: 0;
+    padding: 0px;
+    text-align: center;
+}
+
