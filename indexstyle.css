@@ -1,39 +1,64 @@
-#button-section{
-    margin: 0 auto;
-    text-align: center;
-    padding: 12px;
-    font-family: 'Courier New', Courier, monospace;
 
-}
-
-.btn-get{
-    font-size: 30px;
-    width: 40%;
-    border: none;
-    background-color: blue;
-    color: white;
-    border-radius: 5%;
-    cursor: pointer;
+body{
+  box-sizing: border-box;
 }
 .table-section{
+  display: flex;
+  flex-direction: column;
     width: 100%;
-    justify-items: center;
-    align-content: center;
+    padding: 5px;
+    overflow: hidden;
 }
-.table-section table{
+.header{
+  margin-top:20px ;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  color: blueviolet;
+  font-weight: 600;
+  font-size: 25px;
+}
+h1{
+  
+  background-color: red;
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  border: dotted;
+  margin-top: 280px;
+  padding: 20px;
+}
+
+.table-section .main-table-tag table{
+  border-collapse: collapse; 
     background-color: #ddd;
     width: 100%;
-    margin:0 auto;
+    margin-top:10px ;
 }
-tr{
-    border-bottom: 20px;
-    margin:0 auto;
-    
+
+tr:nth-child(odd) {
+    background-color: #eee;
+  }
+  tr:first-child{
+    background-color:#555;
+    color: #fff;
+    padding: 0;
 }
-t td{
-    border: 3px solid red;
-    margin: 0;
-    padding: 0px;
-    text-align: center;
+  td {
+    text-align: left;
+    border:1px solid gray;
+    padding: 0.5em 1em;
+  }
+input[type=text]{
+    width: 100%;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 5px;
+    background-color: gray;
+    box-sizing:inherit;
+}
+@media only screen and (min-width: 600px) {
+  .main-table-tag{
+    width: 100%;
+  }
 }
 
