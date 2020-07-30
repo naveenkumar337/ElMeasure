@@ -1,29 +1,30 @@
-
-body{
+body {
   box-sizing: border-box;
 }
-div{
+
+div {
   display: block;
   box-sizing: border-box;
-
 }
-.table-section{
+
+.table-section {
   display: flex;
   flex-direction: column;
-    width: 100%;
-    padding: 5px;
-    overflow: hidden;
+  width: 100%;
+  padding: 5px;
+  overflow: hidden;
 }
-.header{
-  margin-top:20px ;
+
+.header {
+  margin-top: 20px;
   font-family: 'Times New Roman', Times, serif;
   font-style: oblique;
   color: blueviolet;
   font-weight: 600;
   font-size: 25px;
 }
-h1{
-  
+
+h1 {
   background-color: red;
   color: white;
   text-align: center;
@@ -33,42 +34,45 @@ h1{
   padding: 20px;
 }
 
-.table-section .main-table-tag table{
-  border-collapse: collapse; 
-    background-color: #ddd;
-    width: 100%;
-    margin-top:10px ;
+.table-section .main-table-tag table {
+  border-collapse: collapse;
+  background-color: #ddd;
+  width: 100%;
+  margin-top: 10px;
 }
 
 tr:nth-child(odd) {
-    background-color: #eee;
-  }
-  tr:first-child{
-    background-color:#555;
-    color: #fff;
-    padding: 0;
+  background-color: #eee;
 }
-  td {
-    text-align: left;
-    border:1px solid gray;
-    padding: 0.5em 1em;
-  }
-input[type=text]{
-    width: 100%;
-    box-shadow: none;
-    text-shadow: none;
-    border-radius: 5px;
-    background-color: gray;
-    box-sizing:inherit;
-}
-@media only screen and (max-width: 1024px){
-  table{display: block;
-  overflow-x: auto; 
-  max-width: fit-content;
-  
 
+tr:first-child {
+  background-color: #555;
+  color: #fff;
+  padding: 0;
 }
-  .main-table-tag{
+
+td {
+  text-align: left;
+  border: 1px solid gray;
+  padding: 0.5em 1em;
+}
+
+input[type=text] {
+  width: 100%;
+  box-shadow: none;
+  text-shadow: none;
+  border-radius: 5px;
+  background-color: gray;
+  box-sizing: inherit;
+}
+
+@media only screen and (max-width: 1024px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    max-width: fit-content;
+  }
+  .main-table-tag {
     max-width: 100%;
   }
 }
