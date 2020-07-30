@@ -61,8 +61,14 @@ input[type=text]{
     background-color: gray;
     box-sizing:inherit;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 1024px){
+  table{display: block;
+  overflow-x: auto; 
+  max-width: fit-content;
+  
+
+}
   .main-table-tag{
-    width: 100%;
+    max-width: 100%;
   }
 }

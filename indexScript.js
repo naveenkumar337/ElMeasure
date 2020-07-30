@@ -82,7 +82,7 @@ function getData(str){
 
 var request=new XMLHttpRequest();
 request.open('Get','http://localhost:49593/get/GetInfo?basic=basic&read=1');
-request.onload=function(){debugger;
+request.onload=function(){
     if(request.status>=200 && request.status<=400){
     str=JSON.parse(this.responseText);
         alert('success');
@@ -94,5 +94,7 @@ request.onload=function(){debugger;
         tabletag.innerHTML="<h1>No Data Get..</h1>"
     }
 }
-debugger;
  request.send();
+request.onerror=()=>{
+    tabletag.innerHTML="<h1>Is Api Online?</h1>"
+}
