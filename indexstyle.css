@@ -2,6 +2,11 @@
 body{
   box-sizing: border-box;
 }
+div{
+  display: block;
+  box-sizing: border-box;
+
+}
 .table-section{
   display: flex;
   flex-direction: column;
@@ -61,4 +66,3 @@ input[type=text]{
     width: 100%;
   }
 }
-

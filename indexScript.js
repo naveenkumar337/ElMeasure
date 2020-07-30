@@ -1,7 +1,7 @@
 
 // var str="bid0=Basic&tr0=#,VLL,VLN,A,V_phase_angle,A_phase_angle,VTHD_V,_ATHD,K_factor_V,K_factor_A&tr1=Avg,0.0000000,0.0000000,0.0000000&tr2=R(V),0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000&tr3=Y(B),0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000&tr4=B(R),0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000,0.0000000&tr5=Frequency,0.0000000&tr6=RPM,0.0000000&bid1=Power&tr0,#,Watts,VA,VAR,PF&tr1=Total,0.0000000,0.0000000,0.0000000,0.0000000&tr2=R,0.0000000,0.0000000,0.0000000,0.0000000&tr3=Y,0.0000000,0.0000000,0.0000000,0.0000000&tr4=B,0.0000000,0.0000000,0.0000000,0.0000000&";
-// debugger;
- //var tabletag=document.querySelector('div');
+
+//  var tabletag=document.querySelector('div');
 // var scrapeddata=getData(str);
 //   appendToTable(scrapeddata);
 var str="";
@@ -48,13 +48,12 @@ function getData(str){
     });
     return finalarray;
     }
+
     function appendToTable(arr){
     var inhtml="";
     for(var i=0;i<arr.length;i++){
-        debugger;
         inhtml+=`<div class='header'>${arr[i].header}</div>`
         var length=arr[i].tds[0].length;
-        debugger;
         inhtml+="<div class='main-table-tag'><table class='table-tag'>";
         if(arr[i].tds[arr[i].tds.length-1][0]==="") arr[i].tds.pop();
         for(var tr=0;tr<arr[i].tds.length;tr++){
@@ -81,13 +80,10 @@ function getData(str){
     tabletag.innerHTML=inhtml;
     }
 
-    // var scrapeddata=getData(str);
-    // appendToTable(scrapeddata);
-
 var request=new XMLHttpRequest();
 request.open('Get','http://localhost:49593/get/GetInfo?basic=basic&read=1');
-request.onload=function(){
-    if(request.status>=200 && request.status==400){
+request.onload=function(){debugger;
+    if(request.status>=200 && request.status<=400){
     str=JSON.parse(this.responseText);
         alert('success');
         var scrapeddata=getData(str);
@@ -98,5 +94,5 @@ request.onload=function(){
         tabletag.innerHTML="<h1>No Data Get..</h1>"
     }
 }
+debugger;
  request.send();
-
